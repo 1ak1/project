@@ -1,0 +1,129 @@
+[
+	{
+		"url": "http://laravel/api/clients",
+		"response": [
+					    {
+					        "id": 1,
+					        "fio": "Cидоров С.С"
+					    },
+					    {
+					        "id": 2,
+					        "fio": "Иванов И.И"
+					    },
+						{
+					        "id": 3,
+					        "fio": "Кузьменко С.В"
+					    }
+					],
+		"method": "GET"
+	},
+	{
+		"url": "http://laravel/api/services",
+		"response": [
+					    {
+					        "id": 1,
+					        "service": "Консультация"
+					    },
+					    {
+					        "id": 2,
+					        "service": "Лечение кариеса"
+					    },
+						{
+					        "id": 3,
+					        "service": "Установка виниров"
+					    }
+					],
+		"method": "GET"
+	},
+	{
+		"url": "http://laravel/api/applications",
+		"response": [
+					    {
+					        "id": 1,
+					        "client_id": 1,
+					        "service_id": 2,
+					        "client": {
+					            "id": 1,
+					            "fio": "Cидоров С.С"
+					        },
+					        "service": {
+					            "id": 2,
+					            "service": "Лечение кариеса"
+					        }
+					    },
+					    {
+					        "id": 2,
+					        "client_id": 1,
+					        "service_id": 1,
+					        "client": {
+					            "id": 1,
+					            "fio": "Cидоров С.С"
+					        },
+					        "service": {
+					            "id": 1,
+					            "service": "Консультация"
+					        }
+					    },
+					    {
+					        "id": 3,
+					        "client_id": 2,
+					        "service_id": 3,
+					        "client": {
+					            "id": 2,
+					            "fio": "Иванов И.И"
+					        },
+					        "service": {
+					            "id": 3,
+					            "service": "Установка виниров"
+					        }
+					    }
+					],
+		"method": "GET"
+	},
+	{
+		"url": "http://laravel/api/clients?name=Кузьменко С.В",
+		"response": { "result": "Запись добавлена" },
+		"method": "POST"
+	},
+	{
+		"url": "http://laravel/api/services?name=Лечение кариеса",
+		"response": { "result": "Запись добавлена" },
+		"method": "POST"
+	},
+	{
+		"url": "http://laravel/api/applications?client_id=2&service_id=3",
+		"response": { "result": "Запись добавлена" },
+		"method": "POST"
+	},
+	{
+		"url": "http://laravel/api/clients/1?name=Соболев И.А",
+		"response": { "result": "Запись обновлена" },
+		"method": "PUT"
+	},
+	{
+		"url": "http://laravel/api/services/2?name=Лечение пульпита",
+		"response": { "result": "Запись обновлена" },
+		"method": "PUT"
+	},
+	{
+		"url": "http://laravel/api/applications/1?client_id=1&service_id=2",
+		"response": { "result": "Запись обновлена" },
+		"method": "PUT"
+	},
+	{
+		"url": "http://laravel/api/clients/4",
+		"response": { "result": "Запись удалена" },
+		"method": "DELETE"
+	},
+	{
+		"url": "http://laravel/api/services/2",
+		"response": { "result": "Запись удалена" },
+		"method": "DELETE"
+	},
+	{
+		"url": "http://laravel/api/applications/1",
+		"response": { "result": "Запись удалена" },
+		"method": "DELETE"
+	},
+
+]
