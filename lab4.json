@@ -1,0 +1,7 @@
+[
+  {
+    "url": "http://lab4.loc:8080/api/answerApi",
+    "response": {"result": "molodez,_vozmi_s_polki_piroshok"},
+    "method": "GET"
+  }
+]
